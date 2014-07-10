@@ -13,3 +13,8 @@ To run the application:
 4. You can reset the game at any time by clicking the 'Reset' button.
 
 Have fun, and thanks for taking the time to play!
+
+![Move1](http://i.imgur.com/pBXM948.png)
+![Move2](http://i.imgur.com/oZjHCEu.png)
+![CompWin](http://i.imgur.com/4vg4FLH.png)
+![Draw](http://i.imgur.com/h9ydLix.png)
