@@ -62,7 +62,7 @@ angular.module('tictactoe', ['ngRoute'])
                     $scope.game_over = true;
                     $scope.result    = 'Computer Wins!';
                     board_state      = 'win';
-                } else if (data.state === 0 && data.move == -1) { // draw
+                } else if (data.state === 0 && data.move == -1 || $scope.board.indexOf('') === -1) { // draw
                     $scope.game_over = true;
                     $scope.result    = 'Draw?!?! Let\'s go again';
                     board_state      = 'draw';

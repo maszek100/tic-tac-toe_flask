@@ -85,7 +85,7 @@ class Board(object):
         for the computer
         :param player {str} X or O
         :return Game state, spot on the board that is the best next move """
-        if len(set(self.board)) == 1: return 1,4
+        if len(set(self.board)) == 1: return 0,4
  
         opponent = self.get_opponent(player)
     
