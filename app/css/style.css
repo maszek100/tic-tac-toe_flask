@@ -1,0 +1,78 @@
+body {
+    font-family: "Press Start 2P";
+}
+
+p {
+    font-size: 0.9em;
+}
+
+blockquote small {
+    font-size: 0.6em;
+}
+
+button span {
+    font-size: 0.7em;
+}
+
+.wrapper {
+    width: 90%;
+}
+
+.top-container {
+    margin: 15px;
+    float: right;
+}
+
+.bt {
+    border-top: 2px solid black;
+}
+
+.br {
+    border-right: 2px solid black;
+}
+
+.bb {
+    border-bottom: 2px solid black;
+}
+
+.bl {
+    border-left: 2px solid black;
+}
+
+.board-container {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.board td {
+    height: 100px;
+    width: 100px;
+}
+
+.board td span {
+    font-size: 4em;
+    margin-left: 25px;
+}
+
+.button-container {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.inline-div {
+    display: inline-block; 
+}
+
+.msg-container{
+    margin-top: 75px;
+}
+
+.msg {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.quote-container {
+    width: 80%;
+}

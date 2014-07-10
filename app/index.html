@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app="tictactoe">
+    <head>
+        <title>tic-tac-toe</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.js"></script>
+        <script type="text/javascript" src="/assets/js/app.js"></script>
+        <script type="text/javascript" src="/assets/js/audio5.min.js"></script>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Press+Start+2P" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+    </head>
+    <body ng-controller="TicCtrl">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-8">
+                    <div class="top-container">
+                        <span><i ng-class="audio_icon" ng-click="toggle_audio()"></i></span> | <span><a href="http://www.linkedin.com/in/jordanlimbach/">Jordan Limbach</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="board-container">
+                        <table class="board">
+                            <tr>
+                                <td id="box-0" ng-click="move(0)" class="br bb"><span>{{board[0]}}</span></td>
+                                <td id="box-1" ng-click="move(1)" class="br bb bl"><span>{{board[1]}}</span></td>
+                                <td id="box-2" ng-click="move(2)" class="bb bl"><span>{{board[2]}}</span></td>
+                            </tr>
+                            <tr>
+                                <td id="box-3" ng-click="move(3)" class="bt br bb"><span>{{board[3]}}</span></td>
+                                <td id="box-4" ng-click="move(4)" class="bt br bb bl"><span>{{board[4]}}</span></td>
+                                <td id="box-5" ng-click="move(5)" class="bt bb bl"><span>{{board[5]}}</span></td>
+                            </tr>
+                            <tr>
+                                <td id="box-6" ng-click="move(6)" class="bt br"><span>{{board[6]}}</span></td>
+                                <td id="box-7" ng-click="move(7)" class="bt br bl"><span>{{board[7]}}</span></td>
+                                <td id="box-8" ng-click="move(8)" class="bt bl"><span>{{board[8]}}</span></td>
+                            </tr>
+                        </table>
+                        <div class="button-container">
+                            <div class="inline-div" ng-show="thinking"><p>Thinking...</p></div>
+                            <div class="inline-div">
+                                <div class="inline-div">
+                                    <button class="btn" ng-click="move()" ng-show="show_ai_first"><span>Let AI go first</span></button>
+                                </div>
+                                <div class="inline-div">
+                                    <button class="btn btn-primary" ng-click="reset()"><span>Reset</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="msg-container">
+                        <div class="msg" ng-show="error">
+                            <div class="alert alert-danger">
+                                <strong>Oh, boy!</strong> An error occured when trying to get the computer's move.
+                            </div>
+                        </div>
+                        <div class="msg" ng-show="game_over">
+                            <div class="alert alert-success">
+                                {{result}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h4 id="game-title">tic-tac-toe in Python + AngularJS</h4>
+                    <div class="quote-container">
+                        <blockquote>
+                            <p id="quote">{{quote.text}}</p>
+                            <small id="quoted">{{quote.by}}</small>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            // code for playing and pausing audio
+            var audio5js, audio_base_dir;
+            audio5js = new Audio5js()
+            audio_base_dir = "/assets/audio/";
+
+            // plays an audio clip 
+            function playAudio(title){
+                if (!title) return;
+                audio5js.pause();
+                audio5js.load(audio_base_dir + title);
+                setTimeout(function(){audio5js.play();}, 200);
+            }
+
+            // stops an audio clip
+            function pauseAudio(){
+                audio5js.pause()
+            }
+        </script>
+    </body>
+</html>
