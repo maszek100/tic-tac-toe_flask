@@ -9,6 +9,7 @@ Easiest and quickest way to get an environment up and running to run the applica
 `git clone https://github.com/jimbach/tic-tac-toe_flask.git`<br/>
 `virtualenv --python=/path/to/python3.3/interpreter venv`<br/>
 `source venv/bin/activate`<br/>
+`pip install -r requirements.txt`<br/>
 `python3.3 tictactoe.py`<br/>
 
 
