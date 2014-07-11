@@ -4,11 +4,13 @@ tic-tac-toe_flask
 Tic Tac Toe using Flask and AngularJS; AI uses minimax algorithm
 
 Library requirements for the project can be found in requirements.txt and installed using `pip install -r requirements.txt`.
-Easiest and quickest way to get an environment up and running to run the application:
-`git clone https://github.com/jimbach/tic-tac-toe_flask.git`
-`virtualenv --python=/path/to/python3.3/interpreter venv`
-`source venv/bin/activate`
-`python3.3 tictactoe.py`
+
+Easiest and quickest way to get an environment up and running to run the application:<br/>
+`git clone https://github.com/jimbach/tic-tac-toe_flask.git`<br/>
+`virtualenv --python=/path/to/python3.3/interpreter venv`<br/>
+`source venv/bin/activate`<br/>
+`python3.3 tictactoe.py`<br/>
+
 
 To run the application:
 
