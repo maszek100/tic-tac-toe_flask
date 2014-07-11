@@ -101,15 +101,15 @@ class Board(object):
 
         result_list = []
         moves = self.available_spaces() 
-        for move in moves:  # Check each open moves
+        for move in moves:
             self.move(move, player)
             ret, mm_move = self.minimax(opponent)
             result_list.append(ret)
             self.move(move, '')
 
         if player == 'X':
-            maxele = max(result_list)
-            return maxele,moves[result_list.index(maxele)]
+            max_element = max(result_list)
+            return max_element,moves[result_list.index(max_element)]
         else:
-            minele = min(result_list)
-            return minele,moves[result_list.index(minele)]
+            min_element = min(result_list)
+            return min_element,moves[result_list.index(min_element)]
